@@ -1,0 +1,52 @@
+addr: "0.0.0.0"
+port: 8000
+api:
+  - 
+    endpoint: /
+    verb: POST
+    content_type: "application/json"
+    response: |
+      "{
+        'id': '1',
+        'title': 'Blue Train',
+        'artist': 'John Coltrane',
+        'price': 56.99
+      }"
+    status_code: 201
+  - 
+    endpoint: /albums
+    verb: GET
+    headers:
+      - '"Accept-Encoding", "*"'
+    content_type: "application/json"
+    response: |
+      [
+          {
+            'id': '1',
+            'title': 'Blue Train',
+            'artist': 'John Coltrane',
+            'price': 56.99
+          },
+          {
+            'id': '2',
+            'title': 'Jeru',
+            'artist': 'Gerry Mulligan',
+            'price': 17.99
+          },
+          {
+            'id': '3',
+            'title': 'Sarah Vaughan and Clifford Brown',
+            'artist': 'Sarah Vaughan',
+            'price': 39.99
+          }
+      ]
+    status_code: 200
+  - 
+    endpoint: /albums/:id
+    verb: GET
+    headers:
+      # - '"Access-Control-Allow-Origin", "*"'
+      # - '"Access-Control-Max-Age", "30"'
+    content_type: "application/json"
+    response: "{'id': '1', 'title': 'Blue Train', 'artist': 'John Coltrane', 'price': 56.99}"
+    status_code: 200
