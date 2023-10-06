@@ -2,7 +2,7 @@
 
 Thank you for choosing FakeAPI for your development needs.
 
-You can use FakeAPI to mock any api you need, FakeAPI will serve a HTTP server with the API you defined in the `config.yaml` file.
+You can use FakeAPI to mock any api you need, FakeAPI will serve a HTTP server with the API defined in the `config.yaml` file.
 
 ## Define your API
 
